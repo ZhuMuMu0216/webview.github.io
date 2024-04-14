@@ -2,16 +2,34 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>CSV Data Visualization</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CSV Data Grouping and Visualization</title>
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        /* 添加简单的按钮样式 */
+        button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        /* 可视化图表的样式 */
+        .bar {
+            fill: steelblue;
+        }
+        .bar:hover {
+            fill: orange;
+        }
+        .axis-label {
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <h2>CSV 数据可视化</h2>
+    <h2>上传CSV文件</h2>
     <input type="file" id="csvFileInput" accept=".csv">
-    <div id="visualization">
-        <svg width="600" height="400"></svg>
-    </div>
+    <button id="groupYear">YEAR</button>
+    <button id="groupMonth">MONTH</button>
+    <div id="vis"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
